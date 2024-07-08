@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="node" prefHeight="435.0" prefWidth="400.0" style="-fx-border-color: #1e272e; -fx-border-radius: 15; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegistrationFormController">
+   <children>
+      <Text layoutX="2.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTER">
+         <font>
+            <Font name="Adelle Sans Devanagari Heavy" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#eb2f06" layoutX="186.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOW">
+         <font>
+            <Font name="Adelle Sans Devanagari Heavy" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Id:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="19.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FristName:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="205.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastname:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="18.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtFname" layoutX="18.0" layoutY="148.0" prefHeight="34.0" prefWidth="174.0" promptText="Input Your Firstname  here" style="-fx-border-color: #192a56; -fx-border-radius: 6; -fx-background-radius: 6;" />
+      <TextField fx:id="txtLname" layoutX="205.0" layoutY="148.0" prefHeight="34.0" prefWidth="174.0" promptText="Input your Lastname  here" style="-fx-border-color: #192a56; -fx-border-radius: 6; -fx-background-radius: 6;" />
+      <TextField fx:id="txtEmail" layoutX="19.0" layoutY="218.0" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="34.0" prefWidth="360.0" promptText="Input your Email here" style="-fx-border-color: #192a56; -fx-border-radius: 6; -fx-background-radius: 6;" />
+      <TextField fx:id="txtUserId" layoutX="20.0" layoutY="80.0" onKeyReleased="#txtUserIdOnKeyReleased" prefHeight="34.0" prefWidth="360.0" promptText="Input your Username here" style="-fx-border-color: #192a56; -fx-border-radius: 6; -fx-background-radius: 6;" />
+      <JFXButton buttonType="RAISED" layoutX="76.0" layoutY="350.0" onAction="#btnRegisterOnAction" prefHeight="46.0" prefWidth="252.0" style="-fx-background-color: #44bd32;" text="Register" textFill="#f8f8f8">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="35.0">
+               <image>
+                  <Image url="@../icons/icons8-register-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <PasswordField fx:id="txtPw" layoutX="18.0" layoutY="292.0" onKeyReleased="#pfPasswordOnKeyReleased" prefHeight="34.0" prefWidth="360.0" promptText="Input your Password here" style="-fx-border-color: #192a56; -fx-border-radius: 6; -fx-background-radius: 6;" />
+      <Label layoutX="102.0" layoutY="411.0" text="You have an account?">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="248.0" layoutY="407.0" onAction="#linkLoginOnAction" text="Login">
+         <font>
+            <Font size="15.0" />
+         </font></Hyperlink>
+   </children>
+</AnchorPane>

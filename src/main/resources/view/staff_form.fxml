@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="600.0" prefWidth="655.0" style="-fx-background-color: #c8d6e5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StaffFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="733.0" layoutX="1.0" strokeType="INSIDE" width="733.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="0.5344418052256532" startX="0.15201900237529692" startY="0.08076009501187649">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.8194444179534912" blue="0.8194444179534912" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.9861111044883728" blue="0.9861111044883728" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+         <fill>
+            <LinearGradient endX="0.26840855106888367" endY="1.0" startX="0.501187648456057" startY="0.15676959619952502">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7412280440330505" green="0.9473684430122375" blue="0.9370614290237427" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.22501636929120966">
+                     <color>
+                        <Color red="1.0" green="0.9734567999839783" blue="0.8009259104728699" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5021689310852839">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.8520346283912659" blue="0.8931225538253784" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7701751514159437">
+                     <color>
+                        <Color red="0.8735359907150269" green="0.9736841917037964" blue="0.8339424729347229" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7832440137863159" green="0.7292885184288025" blue="0.9605262875556946" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text layoutX="12.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff ID:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text layoutX="375.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text layoutX="11.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text layoutX="11.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text layoutX="11.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Position:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <TextField fx:id="txtStaffId" layoutX="11.0" layoutY="121.0" prefHeight="40.0" prefWidth="350.0" promptText="Enter Staff ID" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #f7f1e3; -fx-border-color: #84817a;" />
+      <TextField fx:id="txtAddress" layoutX="10.0" layoutY="193.0" prefHeight="40.0" prefWidth="713.0" promptText="Enter Staff Member Address" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #f7f1e3; -fx-border-color: #84817a;" />
+      <TextField fx:id="txtName" layoutX="374.0" layoutY="121.0" prefHeight="40.0" prefWidth="350.0" promptText="Enter Staff Member Name" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #f7f1e3; -fx-border-color: #84817a;" />
+      <TextField fx:id="txtAge" layoutX="10.0" layoutY="267.0" prefHeight="40.0" prefWidth="350.0" promptText="Enter Staff Member Age" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #f7f1e3; -fx-border-color: #84817a;" />
+      <TextField fx:id="txtContactNumber" layoutX="373.0" layoutY="266.0" onKeyReleased="#txtStaffNumberOnKeyReleased" prefHeight="40.0" prefWidth="350.0" promptText="Enter Staff Member  Contact Number" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #f7f1e3; -fx-border-color: #84817a;" />
+      <TextField fx:id="txtJobPosition" layoutX="10.0" layoutY="338.0" prefHeight="40.0" prefWidth="713.0" promptText="Enter Staff Member Job Position" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #f7f1e3; -fx-border-color: #84817a;" />
+      <TableView fx:id="tblStaffTable" layoutX="9.0" layoutY="393.0" opacity="0.9" prefHeight="286.0" prefWidth="713.0">
+        <columns>
+          <TableColumn fx:id="colStaffId" prefWidth="55.5" style="colour: red;" text="Staff Id" />
+          <TableColumn fx:id="colName" prefWidth="162.5" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="186.5" text="Address" />
+            <TableColumn fx:id="colAge" prefWidth="37.0" text="Age" />
+            <TableColumn fx:id="colNumber" minWidth="7.0" prefWidth="124.0" text="P.Number" />
+            <TableColumn fx:id="colPosition" minWidth="9.0" prefWidth="146.5" text="Position" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="202.0" layoutY="693.0" onAction="#btnSaveOnAction" prefHeight="29.0" prefWidth="96.0" style="-fx-background-radius: 5; -fx-background-color: #4cd137;" text="Save">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-add-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="308.0" layoutY="693.0" onAction="#btnUpdateOnAction" prefHeight="29.0" prefWidth="96.0" style="-fx-background-radius: 5; -fx-background-color: #fbc531;" text="Update">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-update-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="414.0" layoutY="693.0" onAction="#btnDeleteOnAction" prefHeight="29.0" prefWidth="96.0" style="-fx-background-radius: 5; -fx-background-color: #1B9CFC;" text="Delete">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-delete-24.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="520.0" layoutY="693.0" onAction="#btnSearchOnAction" prefHeight="29.0" prefWidth="96.0" style="-fx-background-radius: 5; -fx-background-color: #fad390;" text="Search">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-search-50(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="626.0" layoutY="693.0" onAction="#btnClearOnAction" prefHeight="29.0" prefWidth="96.0" style="-fx-background-radius: 5; -fx-background-color: #EA2027;" text="Clear">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-clear-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012032" height="49.0" stroke="#012032" strokeType="INSIDE" width="349.0" />
+      <ImageView fitHeight="40.0" fitWidth="91.0" layoutX="7.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/attachment_110486890.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eb2f06" height="49.0" layoutX="347.0" stroke="#eb2f06" strokeType="INSIDE" width="387.0" />
+      <Polygon fill="#012032" layoutX="297.0" layoutY="9.0" points="50.0, -9.0, 50.0, 40.0, 131.5, 40.0" stroke="#012032" strokeType="INSIDE" />
+      <Text layoutX="374.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="200.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STAFF" wrappingWidth="109.248046875">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="312.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE" wrappingWidth="148.248046875">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="461.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icons8-staff-48.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="59.0" text="Time:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="83.0" layoutY="61.0" prefHeight="23.0" prefWidth="148.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="59.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="590.0" layoutY="59.0" prefHeight="23.0" prefWidth="129.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

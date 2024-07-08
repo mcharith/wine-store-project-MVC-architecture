@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="730.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="733.0" strokeType="INSIDE" width="733.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="0.5344418052256532" startX="0.15201900237529692" startY="0.08076009501187649">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.8194444179534912" blue="0.8194444179534912" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.9861111044883728" blue="0.9861111044883728" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+         <fill>
+            <LinearGradient endX="0.2779097387173397" endY="1.0" startX="0.5914489311163895" startY="0.15439429928741094">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7412280440330505" green="0.9473684430122375" blue="0.9370614290237427" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.20121951219512194">
+                     <color>
+                        <Color red="0.9259929060935974" green="0.8520346283912659" blue="0.9342105388641357" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.39939024390243894">
+                     <color>
+                        <Color red="0.9473684430122375" green="0.9099414944648743" blue="0.6666666865348816" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5853658536585366">
+                     <color>
+                        <Color red="0.7644168138504028" green="0.9210526347160339" blue="0.6737329363822937" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.75">
+                     <color>
+                        <Color red="0.7894737124443054" green="0.7894737124443054" blue="0.7894737124443054" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8137792348861694" green="0.9605262875556946" blue="0.8578033447265625" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ed1a3b" height="51.0" layoutX="340.0" stroke="#ed1a3b" strokeType="INSIDE" width="391.0" />
+      <Polygon fill="#012032" layoutX="363.0" layoutY="143.0" points="-15.0, -143.5, -15.0, -92.501953125, 56.0, -92.501953125" stroke="#012032" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002132" height="51.0" stroke="BLACK" strokeType="INSIDE" width="350.0" />
+      <Text fill="WHITE" layoutX="246.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Form" wrappingWidth="248.6142578125">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="11.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer.ID:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="372.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="10.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="123.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fill="#070707" layoutX="370.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtCusId" layoutX="10.0" layoutY="173.0" onAction="#txtSearchOnAction" opacity="0.88" prefHeight="40.0" prefWidth="350.0" promptText="Enter Customer Id here" style="-fx-background-color: #f7f1e3; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #84817a;" />
+      <TextField fx:id="txtName" layoutX="370.0" layoutY="172.0" opacity="0.88" prefHeight="40.0" prefWidth="350.0" promptText="Enter Customer  Name here" style="-fx-background-color: #f7f1e3; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #84817a;" />
+      <TextField fx:id="txtAddress" layoutX="10.0" layoutY="255.0" opacity="0.88" prefHeight="40.0" prefWidth="350.0" promptText="Enter Customer Address here" style="-fx-background-color: #f7f1e3; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #84817a;" />
+      <TextField fx:id="txtNumber" layoutX="369.0" layoutY="255.0" onKeyReleased="#txtCustomerNumberOnKeyReleased" opacity="0.88" prefHeight="40.0" prefWidth="350.0" promptText="Enter Customer Contact Number here" style="-fx-background-color: #f7f1e3; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #84817a;" />
+      <TableView fx:id="tblCustomer" layoutX="10.0" layoutY="311.0" opacity="0.8" prefHeight="355.0" prefWidth="710.0">
+        <columns>
+          <TableColumn fx:id="cusId" prefWidth="75.0" text="Customer ID" />
+          <TableColumn fx:id="cusName" prefWidth="165.0" text="Customer Name" />
+            <TableColumn fx:id="cusAddress" prefWidth="267.0" text="Customer Address" />
+            <TableColumn fx:id="cusTele" prefWidth="202.0" text="Contact Number" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="42.0" fitWidth="75.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/attachment_110486890.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTime" layoutX="81.0" layoutY="63.0" text="Time:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="564.0" layoutY="62.0" text="Date">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="176.0" layoutY="677.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: #53D769; -fx-background-radius: 5;" text="Save">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-add-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="398.0" layoutY="678.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #1B9CFC; -fx-background-radius: 5;" text="Delete">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-delete-24.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="287.0" layoutY="678.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #fbc531; -fx-background-radius: 5;" text="Update">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-update-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="619.0" layoutY="678.0" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #EA2027; -fx-background-radius: 5;" text="Clear">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-clear-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="509.0" layoutY="678.0" onAction="#btnSearchOnAction" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #fad390; -fx-background-radius: 5;" text="Search">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-search-50(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="17.0" layoutY="63.0" text="Time:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="507.0" layoutY="62.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="507.0" layoutY="99.0" onAction="#btnGetReportOnAction" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #00b894; -fx-background-radius: 5; -fx-border-color: #5f27cd; -fx-border-radius: 5;" text="Get Report">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-report-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

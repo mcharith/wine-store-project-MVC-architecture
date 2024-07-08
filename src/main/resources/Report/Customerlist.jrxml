@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Customerlist" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75acbbae-26c4-45b2-a4c2-9076f91a015c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="samagiWineStore"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM  samagi_wine_store.`Customer`]]>
+	</queryString>
+	<field name="Customer_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Customer_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Customer_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Address"/>
+		<property name="com.jaspersoft.studio.field.label" value="Address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="Contact_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Contact_number"/>
+		<property name="com.jaspersoft.studio.field.label" value="Contact_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<group name="Customer_id">
+		<groupExpression><![CDATA[$F{Customer_id}]]></groupExpression>
+	</group>
+	<group name="Name">
+		<groupExpression><![CDATA[$F{Name}]]></groupExpression>
+	</group>
+	<group name="Address">
+		<groupExpression><![CDATA[$F{Address}]]></groupExpression>
+	</group>
+	<group name="Contact_number">
+		<groupExpression><![CDATA[$F{Contact_number}]]></groupExpression>
+	</group>
+	<background>
+		<band height="30" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="106" splitType="Stretch">
+			<staticText>
+				<reportElement x="155" y="14" width="245" height="38" uuid="42d59f8a-6367-45eb-966e-fa4be5113419"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Samagi Wine Store]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="44" width="209" height="30" uuid="c137b4c6-9b16-4897-9ed9-f87f265991d8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Trincomalee rd,King Street Matale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="60" width="100" height="30" uuid="65536f51-f990-436d-9b0e-73c1c03e0b0f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[0773383124]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-17" y="2" width="595" height="30" uuid="2d3d3184-0917-40f3-a9a7-8bb81d1a468e"/>
+				<text><![CDATA[==========================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-17" y="71" width="595" height="30" uuid="8f70f51f-5453-455a-9847-8064851457b6"/>
+				<text><![CDATA[==========================================================================]]></text>
+			</staticText>
+			<image>
+				<reportElement x="13" y="19" width="48" height="43" uuid="212ded99-bc5a-4b60-9a14-acdb1a17c7e5"/>
+				<imageExpression><![CDATA["/Users/charithsiriwardana/Downloads/IdeaProject/samagiwinestore/src/main/resources/img/attachment_110486890.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="bc5e5feb-e2a5-4193-9aa0-d045fedcd5b4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9622d3d7-603a-46cb-8329-747f4769b892"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="19d11281-c6c4-4dff-b8fd-c178c6e61794">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ab66adc-5977-4b77-b409-286d993b16d2"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="0" width="100" height="30" uuid="d4d8fcac-2b60-4960-bfae-27977d376670">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c3964ac-7aa0-4029-ba52-92b87a69a19e"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="0" width="100" height="30" uuid="5d95249a-a170-42e2-918a-9e9865be8c52">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b811c07-1bbf-40f9-bdd4-df0cfbc6db13"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact_number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="e13e7713-fb3d-4db7-96a9-93c0ba5ec4bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9622d3d7-603a-46cb-8329-747f4769b892"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Customer_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="100" height="20" uuid="f92cfbdc-de5c-48fc-a1d9-c5ad2a311b14">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ab66adc-5977-4b77-b409-286d993b16d2"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="321" y="1" width="100" height="16" uuid="223c2f47-ec6d-4a5d-a48c-461655f7b9a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c3964ac-7aa0-4029-ba52-92b87a69a19e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="1" width="91" height="18" uuid="495fd575-6bc7-4076-8455-a12d52ccb406">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b811c07-1bbf-40f9-bdd4-df0cfbc6db13"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Contact_number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement x="240" y="13" width="100" height="30" uuid="0fb386a9-eb21-4ec2-8c7c-95006afea64c"/>
+				<text><![CDATA[Thank You!!!!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="28" width="595" height="30" uuid="0e133a81-5be1-4c84-8ff4-4eb2a34c6c39"/>
+				<text><![CDATA[==========================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-19" y="0" width="595" height="30" uuid="d3ee4e63-4917-4bc6-bd96-059e343e10b3"/>
+				<text><![CDATA[==========================================================================]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

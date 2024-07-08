@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ItemProfit" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b9229f1d-2056-4588-ab00-d61e3e7a55ba">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="samagiWineStore"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    Item_code,
+    Description,
+    unit_price,
+    buying_price,
+    qty_on_hand,
+    (unit_price - buying_price) AS profit_per_item,
+    (unit_price - buying_price) * qty_on_hand AS total_potential_profit,
+    NULL AS grand_total_potential_profit
+FROM
+    Items
+
+UNION ALL
+
+SELECT
+    NULL AS Item_code,
+    NULL AS Description,
+    NULL AS unit_price,
+    NULL AS buying_price,
+    NULL AS qty_on_hand,
+    NULL AS profit_per_item,
+    NULL AS total_potential_profit,
+    SUM((unit_price - buying_price) * qty_on_hand) AS grand_total_potential_profit
+FROM
+    Items;]]>
+	</queryString>
+	<field name="Item_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Item_code"/>
+		<property name="com.jaspersoft.studio.field.label" value="Item_code"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+	</field>
+	<field name="unit_price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="unit_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="unit_price"/>
+	</field>
+	<field name="buying_price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="buying_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="buying_price"/>
+	</field>
+	<field name="qty_on_hand" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qty_on_hand"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty_on_hand"/>
+	</field>
+	<field name="profit_per_item" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="profit_per_item"/>
+		<property name="com.jaspersoft.studio.field.label" value="profit_per_item"/>
+	</field>
+	<field name="total_potential_profit" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="total_potential_profit"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_potential_profit"/>
+	</field>
+	<field name="grand_total_potential_profit" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="grand_total_potential_profit"/>
+		<property name="com.jaspersoft.studio.field.label" value="grand_total_potential_profit"/>
+	</field>
+	<group name="Item_code">
+		<groupExpression><![CDATA[$F{Item_code}]]></groupExpression>
+	</group>
+	<group name="Description">
+		<groupExpression><![CDATA[$F{Description}]]></groupExpression>
+	</group>
+	<group name="unit_price">
+		<groupExpression><![CDATA[$F{unit_price}]]></groupExpression>
+	</group>
+	<group name="buying_price">
+		<groupExpression><![CDATA[$F{buying_price}]]></groupExpression>
+	</group>
+	<group name="qty_on_hand">
+		<groupExpression><![CDATA[$F{qty_on_hand}]]></groupExpression>
+	</group>
+	<group name="profit_per_item">
+		<groupExpression><![CDATA[$F{profit_per_item}]]></groupExpression>
+	</group>
+	<group name="total_potential_profit">
+		<groupExpression><![CDATA[$F{total_potential_profit}]]></groupExpression>
+	</group>
+	<group name="grand_total_potential_profit">
+		<groupExpression><![CDATA[$F{grand_total_potential_profit}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="682" y="23" width="100" height="30" uuid="f892c202-31d0-4f97-8686-99646bb525c1"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="14" width="245" height="38" uuid="1a426b94-bfa4-4c42-b3d7-3a1961ff3a21"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Samagi Wine Store]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="680" y="46" width="100" height="30" uuid="4c03fbf2-139c-4e71-b4a0-1304e032c50c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="18" y="19" width="47" height="51" uuid="8e0898a6-8a11-4c3e-882c-cd5ef4246b04"/>
+				<imageExpression><![CDATA["/Users/charithsiriwardana/Downloads/IdeaProject/samagiwinestore/src/main/resources/img/attachment_110486890.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="366" y="60" width="100" height="30" uuid="346c387f-e411-449b-87e3-2a35a75dd819"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[0773383124]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-6" y="2" width="827" height="30" uuid="33b01e22-134f-4545-b2ba-8e64d582a6c3"/>
+				<text><![CDATA[========================================================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="44" width="209" height="30" uuid="7a9ad2cd-6585-4dd3-a92c-84f7ab7a7410"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Trincomalee rd,King Street Matale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-6" y="70" width="827" height="30" uuid="e67450ac-d04f-4abe-a288-ce0c6eaad19e"/>
+				<text><![CDATA[========================================================================================================]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="102" height="30" uuid="ce9a7b5f-a8e8-4fe0-9cc2-feccf17c5f67">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="29748b36-8735-4638-90e9-e2c0e80c94f9"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item_code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="0" width="100" height="30" uuid="3a0ce043-84f9-4dd6-9d23-b6526adb14aa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d778d9b1-b8ce-4f6e-962a-c7c406409078"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="0" width="100" height="30" uuid="5f77c40c-cdd8-4b53-9ec3-278eaf90a74b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b1afaf9-90ef-4698-b441-f5ce9a9b072c"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[unit_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="0" width="100" height="30" uuid="ba6b80d2-8e4d-4cdf-9e99-1482ef4e91d9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="992891f8-5d53-4613-9401-2fea68fb94bd"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[buying_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="0" width="100" height="30" uuid="ddfc2f16-d6ab-41e4-a3ee-dc67c39b9ec7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61552d01-0c61-454a-bce4-642c073fe72f"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[qty_on_hand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="0" width="100" height="30" uuid="4fb873a5-91c0-4cc3-9a22-702437bac219">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a65d9a8d-adb2-4f29-bd7b-bfc9e70b6196"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[profit per item]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="602" y="0" width="100" height="30" uuid="ad75f57d-ed72-4079-babc-ed97b0111514">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="232c30c5-1d68-46f7-b404-cbc0927342f9"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total profit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="0" width="100" height="30" uuid="ceb57ae5-77d4-4219-8d4d-d1c035057bb9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2c739ecb-e48f-44ad-8b5c-10d5be475d2a"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Price ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="102" height="30" uuid="21462434-df9e-4c4e-b09f-7a7ea1073840">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="29748b36-8735-4638-90e9-e2c0e80c94f9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Item_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="0" width="100" height="30" uuid="2d4c1811-1444-4deb-8922-568d93d155cd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d778d9b1-b8ce-4f6e-962a-c7c406409078"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="0" width="100" height="30" uuid="01d3eef2-9601-4cca-bf14-a34a35c6a279">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b1afaf9-90ef-4698-b441-f5ce9a9b072c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{unit_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="0" width="100" height="30" uuid="0ecefe91-ac15-45c4-ad5a-a65e51ebfc70">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="992891f8-5d53-4613-9401-2fea68fb94bd"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{buying_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="0" width="100" height="30" uuid="56244a52-ab15-4f47-b1df-8f227b40ea97">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61552d01-0c61-454a-bce4-642c073fe72f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{qty_on_hand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="0" width="100" height="30" uuid="d06d29c8-8cad-454f-8623-39d1f0b8955a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a65d9a8d-adb2-4f29-bd7b-bfc9e70b6196"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{profit_per_item}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="602" y="0" width="100" height="30" uuid="9d9e18de-5d74-4fa7-b584-20e20aa0bbb7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="232c30c5-1d68-46f7-b404-cbc0927342f9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{total_potential_profit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="0" width="100" height="30" uuid="925b3f95-1829-4926-916c-ead3ff433b39">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2c739ecb-e48f-44ad-8b5c-10d5be475d2a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grand_total_potential_profit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="24" width="827" height="30" uuid="a054bdac-eeee-4058-97cc-97854cd61c44"/>
+				<text><![CDATA[========================================================================================================]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

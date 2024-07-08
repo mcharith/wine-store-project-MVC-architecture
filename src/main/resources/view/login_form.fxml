@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="543.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="568.0" fitWidth="850.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/free-photo-of-design-bottle-of-brand-gin.jpeg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <Text fill="#f2eded" layoutX="9.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELLCOME TO " wrappingWidth="259.62841796875">
+         <font>
+            <Font name="Adelle Sans Devanagari Heavy" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#f5f2f2" layoutX="7.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGING PAGE">
+         <font>
+            <Font name="Adelle Sans Devanagari Heavy" size="36.0" />
+         </font>
+      </Text>
+      <AnchorPane fx:id="pane" layoutX="419.0" layoutY="68.0" opacity="0.95" prefHeight="435.0" prefWidth="400.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #192a56;">
+         <children>
+            <TextField fx:id="txtUserId" layoutX="37.0" layoutY="164.0" onKeyReleased="#txtUserIdOnKeyReleased" prefHeight="36.0" prefWidth="332.0" promptText="Enter UserId here" style="-fx-background-color: #f5f6fa; -fx-border-color: #0a3d62; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <PasswordField fx:id="txtPassword" layoutX="36.0" layoutY="259.0" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="36.0" prefWidth="332.0" promptText="Enter Password here" style="-fx-background-color: #f5f6fa; -fx-border-color: #0a3d62; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <Text fill="#192a56" layoutX="38.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserId:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#192a56" layoutX="36.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#192a56" layoutX="157.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Line endX="123.0" endY="1.52587890625E-5" layoutX="278.0" layoutY="30.0" startX="-28.5" startY="1.52587890625E-5" stroke="#192a56" />
+            <Line endX="98.5" endY="1.52587890625E-5" layoutX="49.0" layoutY="30.0" startX="-48.5" startY="1.52587890625E-5" stroke="#192a56" />
+            <JFXButton buttonType="RAISED" layoutX="272.0" layoutY="343.0" onAction="#btnLoginOnAction" onKeyPressed="#btnEnterOnKeyPress" prefHeight="36.0" prefWidth="112.0" ripplerFill="#110f0f" style="-fx-background-color: #32ff7e;" text="Login" textFill="#070000">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="32.0">
+                     <image>
+                        <Image url="@../icons/imglogin.icons8.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Text fill="#192a56" layoutX="64.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account ?">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Hyperlink layoutX="210.0" layoutY="405.0" onAction="#linkRegistrationOnAction" text="Register on here" textFill="#57ddff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="69.0" fitWidth="77.0" layoutX="168.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-lock-94.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

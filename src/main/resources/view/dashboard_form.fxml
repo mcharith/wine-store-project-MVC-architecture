@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="749.0" prefWidth="928.0" style="-fx-background-color: #dcdde1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
+   <children>
+      <AnchorPane fx:id="root" layoutX="-1.0" prefHeight="750.0" prefWidth="160.0" style="-fx-background-color: #012032;">
+         <children>
+            <Circle fill="#dfe6e9" layoutX="80.0" layoutY="162.0" radius="32.0" stroke="#757171" strokeType="INSIDE" />
+            <ImageView fitHeight="64.0" fitWidth="97.0" layoutX="48.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-admin-48.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="32.0" layoutY="703.0" onAction="#btnLogoutOnAction" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #EA2027; -fx-background-radius: 10;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="-13.0" layoutY="1.0" onAction="#btnBackOnAction" prefHeight="36.0" prefWidth="62.0" textFill="#0a0a0a">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-back-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="80.0" fitWidth="72.0" layoutX="44.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/attachment_110486890.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="12.0" layoutY="541.0" onAction="#btnOrderOnAction" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" text="Order" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="12.0" layoutY="346.0" onAction="#btnItemOnAction" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" text="Item" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="11.0" layoutY="394.0" onAction="#btnPackageOnAction" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" text="Package" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="12.0" layoutY="249.0" onAction="#btnAgainDashbordOnAction" prefHeight="28.0" prefWidth="141.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" text="Dashboard" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="11.0" layoutY="443.0" onAction="#btnCustomerOnAction" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" text="Customer" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="12.0" layoutY="492.0" onAction="#btnStaffOnAction" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" text="Staff" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="16.0" />
+               </font>
+            </JFXButton>
+            <Line endX="10.5" endY="601.0" layoutX="154.0" layoutY="150.0" startX="10.5" startY="-147.0" stroke="#192a56" />
+            <Text fill="WHITE" layoutX="56.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <JFXButton layoutX="11.0" layoutY="298.0" onAction="#btnSupplierOnAction" prefHeight="28.0" prefWidth="141.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" text="Supplier" textFill="#192a56">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets top="10.0" />
+         </opaqueInsets>
+         <effect>
+            <Shadow>
+               <color>
+                  <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+               </color>
+            </Shadow>
+         </effect>
+         <font>
+            <Font name="ITF Devanagari Marathi Medium" size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="pane" layoutX="182.0" layoutY="9.0" prefHeight="730.0" prefWidth="730.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 20;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="651.0" layoutY="52.0" stroke="WHITE" strokeType="INSIDE" width="730.0">
+               <fill>
+                  <LinearGradient endX="0.9857482185273159" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.11999999731779099" green="0.8363115787506104" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.1594573579963987">
+                           <color>
+                              <Color red="0.9722222089767456" green="1.0" blue="0.9953703880310059" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.36585365853658536">
+                           <color>
+                              <Color red="0.9800000190734863" green="1.0" blue="0.996666669845581" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6219512195121951">
+                           <color>
+                              <Color red="0.9800000190734863" green="1.0" blue="0.996666669845581" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8662219675888033">
+                           <color>
+                              <Color red="0.9800000190734863" green="1.0" blue="0.996666669845581" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.641700029373169" green="0.9300000071525574" blue="0.8619126081466675" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#82ccdd" height="52.0" layoutY="42.0" stroke="#82ccdd" strokeType="INSIDE" width="626.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#82ccdd" height="52.0" layoutY="1.0" stroke="#82ccdd" strokeType="INSIDE" width="730.0" />
+            <Label layoutX="454.0" prefHeight="52.0" prefWidth="94.0" text="Date:" textFill="#1b1464">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="537.0" prefHeight="52.0" prefWidth="165.0" textFill="#1b1464">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="454.0" layoutY="40.0" prefHeight="52.0" prefWidth="94.0" text="Time:" textFill="#1b1464">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="44.0" prefHeight="44.0" prefWidth="141.0" text="SAMAGI" textFill="#192a56">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="5.0" text="WELCOME..." textFill="#ea2027">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="43.0" prefHeight="44.0" prefWidth="141.0" text="WINE" textFill="#192a56">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="247.0" layoutY="43.0" prefHeight="44.0" prefWidth="141.0" text="STORE" textFill="#192a56">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Polygon fill="#82ccdd" layoutX="350.0" layoutY="295.0" points="275.0, -201.0, 275.0, -243.0, 380.0, -243.0" stroke="#82ccdd" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#82ccdd" height="38.0" layoutY="693.0" stroke="#82ccdd" strokeType="INSIDE" width="730.0" />
+            <Label layoutX="12.0" layoutY="376.0" prefHeight="344.0" prefWidth="261.0" style="-fx-border-color: #192a56; -fx-border-radius: 15;" />
+            <ImageView fitHeight="270.0" fitWidth="221.0" layoutX="33.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/71bw-rG+bPL.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="617.0" prefHeight="44.0" prefWidth="197.0" text="Item Count :">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblItemCount" layoutX="102.0" layoutY="655.0" prefHeight="44.0" prefWidth="80.0" text="100" textFill="#6d214f">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="263.0" fitWidth="574.0" layoutX="10.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/chart+2020.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="283.0" layoutY="376.0" prefHeight="344.0" prefWidth="436.0" style="-fx-border-color: #192a56; -fx-border-radius: 15;" />
+            <JFXButton buttonType="RAISED" layoutX="505.0" layoutY="143.0" onAction="#btnAgainPlaceOrderOnAction" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: #f7f1e3; -fx-background-radius: 15; -fx-border-color: #eb2f06; -fx-border-radius: 15;" text="Place Order" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="505.0" layoutY="210.0" onAction="#btnAgainPlacePackageOnAction" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: #f7f1e3; -fx-background-radius: 15; -fx-border-color: #eb2f06; -fx-border-radius: 15;" text="Order Package" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="505.0" layoutY="277.0" onAction="#btnAgainAddCusOnAction" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: #f7f1e3; -fx-background-radius: 15; -fx-border-color: #eb2f06; -fx-border-radius: 15;" text="Add New Customer" textFill="#192a56">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.28910818696022034" blue="0.28910818696022034" />
+                     </color>
+                  </Shadow>
+               </effect>
+               <font>
+                  <Font name="ITF Devanagari Marathi Medium" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="272.0" fitWidth="377.0" layoutX="287.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Supplier-101117-scaled.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="317.0" layoutY="655.0" prefHeight="44.0" prefWidth="251.0" text="Supplier Count :">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSupplierCount" layoutX="611.0" layoutY="655.0" prefHeight="44.0" prefWidth="80.0" text="100" textFill="#6d214f">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="538.0" layoutY="41.0" prefHeight="52.0" prefWidth="165.0" textFill="#1b1464">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
